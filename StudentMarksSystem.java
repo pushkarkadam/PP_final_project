@@ -1,10 +1,11 @@
 import java.util.*;
+import java.io.*;
 
 public class StudentMarksSystem{
-	public static void main(String[] args){
-		String studentFile = "student.dat";
+	public static void main(String[] args) throws Exception{
+		//String studentFile = "student.dat";
 		Scanner scan = new Scanner(System.in);
-		//Scanner sc = new Scanner(new File(studentFile));
+		
 		StudentCollection collection = new StudentCollection();
 
 		int userInput;
@@ -27,6 +28,11 @@ public class StudentMarksSystem{
 			switch(choice){
 				case 1:{
 					// TODO: Add a student
+					try{
+						collection.readStudentData();
+					}catch(FileNotFoundException e){
+						System.out.println("File Does not exists");
+					}
 					collection.addStudent();
 					break;
 				}
@@ -37,6 +43,11 @@ public class StudentMarksSystem{
 				}
 				case 3:{
 					// TODO: Display student list
+					try{
+						collection.readStudentData();
+					}catch(FileNotFoundException e){
+						System.out.println("File Does not exists");
+					}
 					collection.displayStudent();
 					break;
 				}

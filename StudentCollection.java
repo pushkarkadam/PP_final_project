@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 
 public class StudentCollection{
 	private int sid;
@@ -8,6 +9,7 @@ public class StudentCollection{
 	}
 
 	Scanner scan = new Scanner(System.in);
+	
 
 	ArrayList<Student> studentList = new ArrayList<Student>();
 	Student student;
@@ -51,5 +53,23 @@ public class StudentCollection{
 				studentList.remove(i);
 			}
 		}
+	}
+
+	public void readStudentData() throws FileNotFoundException{
+		String studentFile = "student.dat";
+		Scanner sc = new Scanner(new File(studentFile));
+		System.out.println("\n**Reading input file " + studentFile + " .. ");
+		while(sc.hasNext()){
+			sid = sc.nextInt();
+			firstName = sc.next();
+			lastName = sc.next();
+			major = sc.next();
+			nationality = sc.next();
+
+			student = new Student(sid,firstName,lastName,major,nationality);
+			studentList.add(student);
+		}
+		sc.close();
+		System.out.println("Done Scanning.");
 	}
 }

@@ -1,12 +1,14 @@
 public class Student{
 	private int studentID;
-	private String studentName;
+	private String studentFirstName;
+	private String studentLastName;
 	private String studentMajor;
 	private String studentNationality;
 
-	public Student(int studentID, String studentName, String studentMajor, String studentNationality){
+	public Student(int studentID, String studentFirstName, String studentLastName, String studentMajor, String studentNationality){
 		this.studentID = studentID;
-		this.studentName = studentName;
+		this.studentFirstName = studentFirstName;
+		this.studentLastName = studentLastName;
 		this.studentMajor = studentMajor;
 		this.studentNationality = studentNationality;
 	}
@@ -16,12 +18,12 @@ public class Student{
 	}
 
 	public String toString(){
-		String summary = "--------------------------------\n";
-		summary += "Student ID: " + studentID + "\n";
-		summary += "Name: " + studentName + "\n";
-		summary += "Major: " + studentMajor + "\n";
-		summary += "Nationality: " + studentNationality + "\n";
-		summary += "--------------------------------\n";
+		String summary = "";
+		summary += studentID + "\t";
+		summary += studentFirstName + "\t";
+		summary += studentLastName + "\t";
+		summary += studentMajor + "\t";
+		summary += studentNationality;
 
 		return summary;
 	}

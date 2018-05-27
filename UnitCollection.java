@@ -43,7 +43,13 @@ public class UnitCollection{
 
 	// TODO: Delete unit by unit no
 	public void deleteUnit(){
-		// Add code here
+		System.out.println("\nEnter Unit number: ");
+		int unit_no = scan.nextInt();
+		for(int i = 0; i < unitList.size(); i++){
+			if(unit_no == unitList.get(i).getUnitNo()){
+				unitList.remove(i);
+			}
+		}
 	}
 
 	// TODO: Read the data from unit.dat

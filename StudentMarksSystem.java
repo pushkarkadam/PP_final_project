@@ -14,7 +14,7 @@ public class StudentMarksSystem{
 		try{
 			studentCollection.readStudentData();
 		}catch(FileNotFoundException e){
-			System.out.println("File Does not exists");
+			System.out.println("File Does not exist");
 		}
 
 		System.out.println("\n\n");
@@ -29,7 +29,13 @@ public class StudentMarksSystem{
 
 		while(choice != 0){
 			menu();
-			choice = scan.nextInt();
+			try{
+				choice = scan.nextInt();
+			}catch(InputMismatchException e){
+				System.out.println("Invalid input. Please try again.");
+				scan.next(); // Consumes the invalid token
+			}
+			
 
 			switch(choice){
 				case 1:{
@@ -60,8 +66,6 @@ public class StudentMarksSystem{
 		}catch(IOException e){
 			System.out.println("Unable to write new information");
 		}
-
-
 	}
 
 	public static void menu(){

@@ -3,7 +3,6 @@ import java.io.*;
 
 public class StudentMarksSystem{
 	public static void main(String[] args) throws Exception{
-		//String studentFile = "student.dat";
 		Scanner scan = new Scanner(System.in);
 		
 		StudentCollection collection = new StudentCollection();
@@ -36,7 +35,6 @@ public class StudentMarksSystem{
 				case 1:{
 					// Add a student
 					collection.addStudent();
-					// TODO: Add a write method
 					break;
 				}
 				case 2:{
@@ -54,6 +52,13 @@ public class StudentMarksSystem{
 				}
 			}
 
+		}
+
+		// Write the student data to the student.dat file
+		try{
+			collection.writeStudentData();
+		}catch(IOException e){
+			System.out.println("Unable to write new information");
 		}
 
 

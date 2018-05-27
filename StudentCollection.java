@@ -72,4 +72,17 @@ public class StudentCollection{
 		sc.close();
 		System.out.println("Done Scanning.");
 	}
+
+	public void writeStudentData() throws IOException{
+		String studentFile = "student.dat";
+		PrintWriter outputFile = new PrintWriter(new FileWriter(studentFile));
+		System.out.println("\n** Writing the data in the file " + studentFile + " .. ");
+		int idx = 0;
+		while(idx < studentList.size()){
+			outputFile.println(studentList.get(idx));
+			idx++;
+		}
+		outputFile.close();
+		System.out.println("Done writing the file");
+	}
 }

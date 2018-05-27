@@ -71,6 +71,15 @@ public class UnitCollection{
 
 	//TODO: Write data to file unit.dat
 	public void writeUnitData() throws IOException{
-		// Add code here
+		String unitFile = "unit.dat";
+		PrintWriter unitOutputFile = new PrintWriter(new FileWriter(unitFile));
+		System.out.println("\n** Writing the data in the file " + unitFile + " .. ");
+		int idx = 0;
+		while(idx < unitList.size()){
+			unitOutputFile.println(unitList.get(idx));
+			idx++;
+		}
+		unitOutputFile.close();
+		System.out.println("Writing " + unitFile + " complete");
 	}
 }

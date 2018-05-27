@@ -11,6 +11,13 @@ public class StudentMarksSystem{
 		int userInput;
 		int choice = 99;
 
+		// Reads the student data from the student.dat file
+		try{
+			collection.readStudentData();
+		}catch(FileNotFoundException e){
+			System.out.println("File Does not exists");
+		}
+
 		System.out.println("\n\n");
 		System.out.println("---------------------");
 		System.out.println("Student Marks System");
@@ -27,13 +34,9 @@ public class StudentMarksSystem{
 
 			switch(choice){
 				case 1:{
-					// TODO: Add a student
-					try{
-						collection.readStudentData();
-					}catch(FileNotFoundException e){
-						System.out.println("File Does not exists");
-					}
+					// Add a student
 					collection.addStudent();
+					// TODO: Add a write method
 					break;
 				}
 				case 2:{
@@ -43,11 +46,6 @@ public class StudentMarksSystem{
 				}
 				case 3:{
 					// TODO: Display student list
-					try{
-						collection.readStudentData();
-					}catch(FileNotFoundException e){
-						System.out.println("File Does not exists");
-					}
 					collection.displayStudent();
 					break;
 				}

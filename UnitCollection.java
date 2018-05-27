@@ -29,12 +29,16 @@ public class UnitCollection{
 		unit = new Unit(unitName, unitNo, unitCredit);
 		unitList.add(unit);
 
-		System.out.println("Unit added");
+		System.out.println("Unit added.");
 	}
 
 	// TODO: Display units from unit list
 	public void displayUnit(){
-		// Add code here
+		int idx = 0;
+		while(idx < unitList.size()){
+			System.out.println(unitList.get(idx));
+			idx++;
+		}
 	}
 
 	// TODO: Delete unit by unit no

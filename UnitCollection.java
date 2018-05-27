@@ -54,7 +54,19 @@ public class UnitCollection{
 
 	// TODO: Read the data from unit.dat
 	public void readUnitData() throws FileNotFoundException{
-		// Add code here
+		String unitFile = "unit.dat";
+		Scanner sc = new Scanner(new File(unitFile));
+		System.out.println("\n**Reading input file " + unitFile + " .. ");
+		while(sc.hasNext()){
+			unitNo = sc.nextInt();
+			unitName = sc.next();
+			unitCredit = sc.nextInt();
+
+			unit = new Unit(unitName,unitNo,unitCredit);
+			unitList.add(unit);
+		}
+		sc.close();
+		System.out.println("Scanning " + unitFile + " complete.");
 	}
 
 	//TODO: Write data to file unit.dat

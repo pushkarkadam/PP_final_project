@@ -23,7 +23,8 @@ public class UnitCollection{
 		scan.nextLine();
 		unitName = scan.nextLine();
 
-		System.out.print("\n");
+		System.out.print("\nUnit Credit: ");
+		//scan.nextInt();
 		unitCredit = scan.nextInt();
 
 		unit = new Unit(unitName, unitNo, unitCredit);

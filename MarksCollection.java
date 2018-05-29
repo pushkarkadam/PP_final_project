@@ -55,12 +55,33 @@ public class MarksCollection{
 	}
 
 	// TODO: Read the data from marks.dat file
-	public void readMarksData(){
-		// Add code here
+	public void readMarksData() throws FileNotFoundException{
+		String marksFile = "marks.dat";
+		Scanner sc = new Scanner(new File(marksFile));
+		System.out.println("\n**Reading input file " + marksFile + " .. ");
+		while(sc.hasNext()){
+			unitNo = sc.nextInt();
+			studentID = sc.nextInt();
+			unitMarks = sc.nextInt();
+
+			marks = new Marks(unitNo,studentID,unitMarks);
+			marksList.add(marks);
+		}
+		sc.close();
+		System.out.println("Scanning " + marksFile + " complete");
 	}
 
 	//TODO: Write data to file marks.dat
-	public void writeMarksData(){
-		// Add code here
+	public void writeMarksData() throws IOException{
+		String marksFile = "marks.dat";
+		PrintWriter marksOutputFile = new PrintWriter(new FileWriter(marksFile));
+		System.out.println("\n** Writing the data in the file " + marksFile + " .. ");
+		int idx = 0;
+		while(idx < marksList.size()){
+			marksOutputFile.println(marksList.get(idx));
+			idx++;
+		}
+		marksOutputFile.close();
+		System.out.println("Writing " + marksFile + " complete.");
 	}
 }

@@ -44,7 +44,7 @@ public class UnitCollection{
 
 	// TODO: Delete unit by unit no
 	public void deleteUnit(){
-		System.out.println("\nEnter Unit number: ");
+		System.out.print("\nEnter Unit number: ");
 		int unit_no = scan.nextInt();
 		for(int i = 0; i < unitList.size(); i++){
 			if(unit_no == unitList.get(i).getUnitNo()){
@@ -81,6 +81,6 @@ public class UnitCollection{
 			idx++;
 		}
 		unitOutputFile.close();
-		System.out.println("Writing " + unitFile + " complete");
+		System.out.println("Writing " + unitFile + " complete.");
 	}
 }

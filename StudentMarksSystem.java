@@ -39,9 +39,6 @@ public class StudentMarksSystem{
 		System.out.println("---------------------");
 		System.out.println("Select the choices from the menu");
 		System.out.println("---------------------");
-		System.out.println("MENU");
-		//menu();
-		System.out.println("---------------------");
 
 		while(choice != 0){
 			menu();
@@ -66,7 +63,11 @@ public class StudentMarksSystem{
 				}
 				case 3:{
 					// Display student list
+					System.out.println("\n\n\n------------------------------------------------------------");
+					System.out.println("Student ID\tName\t\tMajor\t\tNationality");
+					System.out.println("------------------------------------------------------------");
 					studentCollection.displayStudent();
+					System.out.println("\n------------------------------------------------------------\n\n\n");
 					break;
 				}
 				case 4:{
@@ -129,17 +130,21 @@ public class StudentMarksSystem{
 	}
 
 	public static void menu(){
-		String menu = "";
-		menu += "1. Add new students.\n";
-		menu += "2. Delete a student.\n";
-		menu += "3. Display student list.\n";
-		menu += "4. Add new unit.\n";
+		String menu = "\n\n";
+		menu += "-----------------------\n";
+		menu += "MENU\n";
+		menu += "-----------------------\n";
+		menu += "1. Add new students\n";
+		menu += "2. Delete a student\n";
+		menu += "3. Display student list\n";
+		menu += "4. Add new unit\n";
 		menu += "5. Delete a unit\n";
 		menu += "6. Display all units\n";
 		menu += "7. Add Student Marks\n";
 		menu += "8. Delete student marks\n";
 		menu += "9. Display student marks\n";
 		menu += "0. Exit.\n";
+		menu += "-----------------------\n";
 		menu += "Your Choice -> ";
 
 		System.out.print(menu);

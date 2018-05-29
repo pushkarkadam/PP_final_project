@@ -43,6 +43,7 @@ public class MarksCollection{
 	public void deleteMarks(){
 		System.out.print("\nEnter student ID: ");
 		int student_id = scan.nextInt();
+		boolean flag = true;
 
 		System.out.print("\nEnter unit number: ");
 		int unit_no = scan.nextInt();
@@ -50,7 +51,11 @@ public class MarksCollection{
 		for(int i=0; i < marksList.size(); i++){
 			if(student_id == marksList.get(i).getStudentID() && unit_no == marksList.get(i).getUnitNo()){
 				marksList.remove(i);
+				flag = false;
 			}
+		}
+		if(flag){
+			System.out.println("Incorrect Information");
 		}
 	}
 

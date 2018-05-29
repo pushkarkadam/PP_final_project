@@ -7,6 +7,7 @@ public class StudentMarksSystem{
 		
 		StudentCollection studentCollection = new StudentCollection();
 		UnitCollection unitCollection = new UnitCollection();
+		MarksCollection marksCollection = new MarksCollection();
 
 		int userInput;
 		int choice = 99;
@@ -21,6 +22,13 @@ public class StudentMarksSystem{
 		// Reads the unit data from the unit.dat file
 		try{
 			unitCollection.readUnitData();
+		}catch(FileNotFoundException e){
+			System.out.println("File Does not exist");
+		}
+
+		// Read the marks data from the marks.dat file
+		try{
+			marksCollection.readMarksData();
 		}catch(FileNotFoundException e){
 			System.out.println("File Does not exist");
 		}
@@ -76,6 +84,21 @@ public class StudentMarksSystem{
 					unitCollection.displayUnit();
 					break;
 				}
+				case 7:{
+					// Add student marks
+					marksCollection.addMarks();
+					break;
+				}
+				case 8:{
+					// Delete student marks
+					marksCollection.deleteMarks();
+					break;
+				}
+				case 9:{
+					// Display student marks
+					marksCollection.displayMarks();
+					break;
+				}
 				default:{
 					// TODO: Add some statement
 				}
@@ -96,6 +119,13 @@ public class StudentMarksSystem{
 		}catch(IOException e){
 			System.out.println("Unable to write new information.");
 		}
+
+		// Write the marks data to marks.dat file
+		try{
+			marksCollection.writeMarksData();
+		}catch(IOException e){
+			System.out.println("Unable to write new information");
+		}
 	}
 
 	public static void menu(){
@@ -106,6 +136,9 @@ public class StudentMarksSystem{
 		menu += "4. Add new unit.\n";
 		menu += "5. Delete a unit\n";
 		menu += "6. Display all units\n";
+		menu += "7. Add Student Marks\n";
+		menu += "8. Delete student marks\n";
+		menu += "9. Display student marks\n";
 		menu += "0. Exit.\n";
 		menu += "Your Choice -> ";
 

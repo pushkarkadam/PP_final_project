@@ -31,7 +31,7 @@ public class MarksCollection{
 	}
 
 	// TODO: Display marks from marks list
-	public void diplayMarks(){
+	public void displayMarks(){
 		int idx = 0;
 		while(idx < marksList.size()){
 			System.out.println(marksList.get(idx));

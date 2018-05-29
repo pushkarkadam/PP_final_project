@@ -82,7 +82,11 @@ public class StudentMarksSystem{
 				}
 				case 6:{
 					// Display all the units
+					System.out.println("\n\n\n-------------------------------------------");
+					System.out.println("Unit No\t\tUnit Name\tUnit Credit");
+					System.out.println("-------------------------------------------");
 					unitCollection.displayUnit();
+					System.out.println("-------------------------------------------\n\n");
 					break;
 				}
 				case 7:{
@@ -97,7 +101,11 @@ public class StudentMarksSystem{
 				}
 				case 9:{
 					// Display student marks
+					System.out.println("\n\n\n------------------------------");
+					System.out.println("Unit\tSID\t\tMarks");
+					System.out.println("------------------------------");
 					marksCollection.displayMarks();
+					System.out.println("------------------------------\n\n");
 					break;
 				}
 				default:{

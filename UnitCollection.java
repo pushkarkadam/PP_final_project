@@ -46,10 +46,15 @@ public class UnitCollection{
 	public void deleteUnit(){
 		System.out.print("\nEnter Unit number: ");
 		int unit_no = scan.nextInt();
+		boolean flag = true;
 		for(int i = 0; i < unitList.size(); i++){
 			if(unit_no == unitList.get(i).getUnitNo()){
 				unitList.remove(i);
+				flag = false;
 			}
+		}
+		if(flag){
+			System.out.println("Incorrect information");
 		}
 	}
 

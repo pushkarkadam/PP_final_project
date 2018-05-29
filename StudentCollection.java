@@ -48,10 +48,15 @@ public class StudentCollection{
 	public void deleteStudent(){
 		System.out.print("\nEnter Student ID: ");
 		int student_id = scan.nextInt();
+		boolean flag = true;
 		for(int i = 0; i < studentList.size(); i++){
 			if(student_id == studentList.get(i).getStudentID()){
 				studentList.remove(i);
+				flag = false;
 			}
+		}
+		if(flag){
+			System.out.println("Incorrect Information.");
 		}
 	}
 

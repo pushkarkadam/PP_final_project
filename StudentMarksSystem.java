@@ -8,9 +8,11 @@ public class StudentMarksSystem{
 		StudentCollection studentCollection = new StudentCollection();
 		UnitCollection unitCollection = new UnitCollection();
 		MarksCollection marksCollection = new MarksCollection();
+		Menu menu = new Menu();
 
 		int userInput;
 		int choice = 99;
+		int secondChoice = 99;
 
 		// Reads the student data from the student.dat file
 		try{
@@ -41,7 +43,7 @@ public class StudentMarksSystem{
 		System.out.println("---------------------");
 
 		while(choice != 0){
-			menu();
+			menu.menu();
 			try{
 				choice = scan.nextInt();
 			}catch(InputMismatchException e){
@@ -52,60 +54,117 @@ public class StudentMarksSystem{
 
 			switch(choice){
 				case 1:{
-					// Add a student
-					studentCollection.addStudent();
+					//Create Student Methods
+					while(secondChoice != 0){
+						menu.studentMenu();
+						try{
+							secondChoice = scan.nextInt();
+						}catch(InputMismatchException e){
+							System.out.println("Invalid input. Please try again.");
+							scan.next();
+						}
+
+						switch(secondChoice){
+							case 1:{
+								// Add student
+								studentCollection.addStudent();
+								break;
+							}
+							case 2:{
+								// Delete student
+								studentCollection.deleteStudent();
+								break;
+							}
+							case 3: {
+								// Display all students
+								System.out.println("\n\n\n------------------------------------------------------------");
+								System.out.println("Student ID\tName\t\tMajor\t\tNationality");
+								System.out.println("------------------------------------------------------------");
+								studentCollection.displayStudent();
+								System.out.println("\n------------------------------------------------------------\n\n\n");
+								break;
+							}
+							default:{
+								// TODO: Add statements
+							}
+						}
+					}
 					break;
 				}
 				case 2:{
-					// Delete a student
-					studentCollection.deleteStudent();
+					// TODO: Create Unit methods
+					while(secondChoice != 0){
+						menu.unitMenu();
+						try{
+							secondChoice = scan.nextInt();
+						}catch(InputMismatchException e){
+							System.out.println("Invalid input. Please try again.");
+							scan.next();
+						}
+
+						switch(secondChoice){
+							case 1:{
+								// TODO: Add unit
+								unitCollection.addUnit();
+								break;
+							}
+							case 2:{
+								// TODO: Delete unit
+								unitCollection.deleteUnit();
+								break;
+							}
+							case 3: {
+								// TODO: Display all units
+								System.out.println("\n\n\n-------------------------------------------");
+								System.out.println("Unit No\t\tUnit Name\tUnit Credit");
+								System.out.println("-------------------------------------------");
+								unitCollection.displayUnit();
+								System.out.println("-------------------------------------------\n\n");
+								break;
+							}
+							default:{
+								// TODO: Add statements
+							}
+						}
+					}
 					break;
 				}
 				case 3:{
-					// Display student list
-					System.out.println("\n\n\n------------------------------------------------------------");
-					System.out.println("Student ID\tName\t\tMajor\t\tNationality");
-					System.out.println("------------------------------------------------------------");
-					studentCollection.displayStudent();
-					System.out.println("\n------------------------------------------------------------\n\n\n");
-					break;
-				}
-				case 4:{
-					// Add new unit
-					unitCollection.addUnit();
-					break;
-				}
-				case 5:{
-					// Delete unit by unit number
-					unitCollection.deleteUnit();
-					break;
-				}
-				case 6:{
-					// Display all the units
-					System.out.println("\n\n\n-------------------------------------------");
-					System.out.println("Unit No\t\tUnit Name\tUnit Credit");
-					System.out.println("-------------------------------------------");
-					unitCollection.displayUnit();
-					System.out.println("-------------------------------------------\n\n");
-					break;
-				}
-				case 7:{
-					// Add student marks
-					marksCollection.addMarks();
-					break;
-				}
-				case 8:{
-					// Delete student marks
-					marksCollection.deleteMarks();
-					break;
-				}
-				case 9:{
-					// Display student marks
-					System.out.println("\n\n\n------------------------------");
-					System.out.println("Unit\tSID\t\tMarks");
-					System.out.println("------------------------------");
-					marksCollection.displayMarks();
-					System.out.println("------------------------------\n\n");
+					// TODO: Create marks methods
+					while(secondChoice != 0){
+						menu.marksMenu();
+						try{
+							secondChoice = scan.nextInt();
+						}catch(InputMismatchException e){
+							System.out.println("Invalid input. Please try again.");
+							scan.next();
+						}
+
+						switch(secondChoice){
+							case 1:{
+								// TODO: Add marks
+								marksCollection.addMarks();
+								break;
+							}
+							case 2:{
+								// TODO: Delete marks
+								marksCollection.deleteMarks();
+								break;
+							}
+							case 3: {
+								// TODO: Display all marks
+								System.out.println("\n\n\n------------------------------");
+								System.out.println("Unit\tSID\t\tMarks");
+								System.out.println("------------------------------");
+								marksCollection.displayMarks();
+								System.out.println("------------------------------\n\n");
+								break;
+							}
+							default:{
+								// TODO: Add statements
+							}
+						}
+					}
 					break;
 				}
 				default:{
@@ -137,6 +196,7 @@ public class StudentMarksSystem{
 		}
 	}
 
+	// TODO: Change the main menu
 	public static void menu(){
 		String menu = "\n\n";
 		menu += "-----------------------\n";

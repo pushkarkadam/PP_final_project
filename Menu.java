@@ -31,7 +31,7 @@ public class Menu{
 		studentMenu += "-------------------------\n";
 		studentMenu += "Your Choice -> ";
 
-		System.out.println(studentMenu);
+		System.out.print(studentMenu);
 
 	}
 
@@ -48,7 +48,7 @@ public class Menu{
 		unitMenu += "-------------------------\n";
 		unitMenu += "Your Choice -> ";
 
-		System.out.println(unitMenu);
+		System.out.print(unitMenu);
 	}
 
 	// TODO: Add marks sub-menu
@@ -60,10 +60,10 @@ public class Menu{
 		marksMenu += "1. Add student marks\n";
 		marksMenu += "2. Delete student marks\n";
 		marksMenu += "3. Display student marks\n";
-		marksMenu += "4. Return to main menu\n";
+		marksMenu += "0. Return to main menu\n";
 		marksMenu += "-------------------------\n";
 		marksMenu += "Your Choice -> ";
 
-		System.out.println(marksMenu);
+		System.out.print(marksMenu);
 	}
 }

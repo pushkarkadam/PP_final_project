@@ -89,6 +89,8 @@ public class StudentMarksSystem{
 							}
 						}
 					}
+					 // Reassigning secondChoice with a high value for further execution
+					secondChoice = 99;
 					break;
 				}
 				case 2:{
@@ -127,6 +129,8 @@ public class StudentMarksSystem{
 							}
 						}
 					}
+					 // Reassigning secondChoice with a high value for further execution
+					secondChoice = 99;
 					break;
 				}
 				case 3:{
@@ -165,6 +169,8 @@ public class StudentMarksSystem{
 							}
 						}
 					}
+					 // Reassigning secondChoice with a high value for further execution
+					secondChoice = 99;
 					break;
 				}
 				default:{

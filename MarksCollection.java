@@ -39,6 +39,29 @@ public class MarksCollection{
 		}
 	}
 
+	// TODO: Display marks by student ID
+	public void displayMarksByStudentID(){
+		ArrayList<Marks> outputMarks = new ArrayList<Marks>();
+		System.out.print("\nEnter student ID: ");
+		int student_id = scan.nextInt();
+		int idx = 0;
+
+		for(int i=0; i<marksList.size();i++){
+			if(student_id == marksList.get(i).getStudentID()){
+				outputMarks.add(marksList.get(i));
+			}
+		}
+
+		if(outputMarks.isEmpty()){
+			System.out.println("\nInvalid Input");
+		}else{
+			while(idx < outputMarks.size()){
+				System.out.println(outputMarks.get(idx));
+				idx++;
+			}
+		}
+	}
+
 	// TODO: Delete marks by student ID
 	public void deleteMarks(){
 		System.out.print("\nEnter student ID: ");

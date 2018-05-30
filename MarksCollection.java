@@ -141,6 +141,7 @@ public class MarksCollection{
 			marksList.add(marks);
 		}
 		sc.close();
+		System.out.println("|||||||||||||||||||||||||| 100 %\n");
 		System.out.println("Scanning " + marksFile + " complete");
 	}
 
@@ -155,6 +156,7 @@ public class MarksCollection{
 			idx++;
 		}
 		marksOutputFile.close();
-		System.out.println("Writing " + marksFile + " complete.");
+		System.out.println("|||||||||||||||||||||||||| 100 %\n");
+		System.out.println("Writing " + marksFile + " complete.\n");
 	}
 }

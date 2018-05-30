@@ -142,7 +142,7 @@ public class MarksCollection{
 		}
 		sc.close();
 		System.out.println("|||||||||||||||||||||||||| 100 %\n");
-		System.out.println("Scanning " + marksFile + " complete");
+		System.out.println("Scanning " + marksFile + " complete.\n");
 	}
 
 	//TODO: Write data to file marks.dat

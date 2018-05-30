@@ -72,7 +72,8 @@ public class UnitCollection{
 			unitList.add(unit);
 		}
 		sc.close();
-		System.out.println("Scanning " + unitFile + " complete.");
+		System.out.println("|||||||||||||||||||||||||| 100 %\n");
+		System.out.println("Scanning " + unitFile + " complete.\n");
 	}
 
 	//TODO: Write data to file unit.dat
@@ -86,6 +87,7 @@ public class UnitCollection{
 			idx++;
 		}
 		unitOutputFile.close();
-		System.out.println("Writing " + unitFile + " complete.");
+		System.out.println("|||||||||||||||||||||||||| 100 %\n");
+		System.out.println("Writing " + unitFile + " complete.\n");
 	}
 }

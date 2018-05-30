@@ -66,6 +66,32 @@ public class MarksCollection{
 		}
 	}
 
+	// TODO: Display marks by unit number
+	public void displayMarksByUnitNo(){
+		ArrayList<Marks> unitMarks = new ArrayList<Marks>();
+		System.out.print("\nEnter Unit number: ");
+		int unit_no = scan.nextInt();
+		int idx = 0;
+
+		for (int i=0; i<marksList.size(); i++){
+			if(unit_no == marksList.get(i).getUnitNo()){
+				unitMarks.add(marksList.get(i));
+			}
+		}
+		if(unitMarks.isEmpty()){
+			System.out.println("\nInvalid Input");
+		}else{
+			System.out.println("\n\n\n------------------------------");
+			System.out.println("Unit\tSID\t\tMarks");
+			System.out.println("------------------------------");
+			while(idx < unitMarks.size()){
+				System.out.println(unitMarks.get(idx));
+				idx++;
+			}
+			System.out.println("------------------------------\n\n");
+		}
+	}
+
 	// TODO: Delete marks by student ID
 	public void deleteMarks(){
 		System.out.print("\nEnter student ID: ");

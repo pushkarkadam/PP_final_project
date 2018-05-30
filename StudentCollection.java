@@ -75,7 +75,8 @@ public class StudentCollection{
 			studentList.add(student);
 		}
 		sc.close();
-		System.out.println("Done Scanning.");
+		System.out.println("|||||||||||||||||||||||||| 100 %\n");
+		System.out.println("Scanning " + studentFile + " complete.\n");
 	}
 
 	public void writeStudentData() throws IOException{
@@ -88,6 +89,7 @@ public class StudentCollection{
 			idx++;
 		}
 		outputFile.close();
-		System.out.println("Done writing the file");
+		System.out.println("|||||||||||||||||||||||||| 100 %\n");
+		System.out.println("Writing " + studentFile + " complete.\n");
 	}
 }

@@ -155,13 +155,19 @@ public class StudentMarksSystem{
 								marksCollection.deleteMarks();
 								break;
 							}
-							case 3: {
+							case 3:{
 								// TODO: Display all marks
 								System.out.println("\n\n\n------------------------------");
 								System.out.println("Unit\tSID\t\tMarks");
 								System.out.println("------------------------------");
 								marksCollection.displayMarks();
 								System.out.println("------------------------------\n\n");
+								break;
+							}
+
+							case 4:{
+								// TODO: Display marks by student ID
+								marksCollection.displayMarksByStudentID();
 								break;
 							}
 							default:{

@@ -55,10 +55,14 @@ public class MarksCollection{
 		if(outputMarks.isEmpty()){
 			System.out.println("\nInvalid Input");
 		}else{
+			System.out.println("\n\n\n------------------------------");
+			System.out.println("Unit\tSID\t\tMarks");
+			System.out.println("------------------------------");
 			while(idx < outputMarks.size()){
 				System.out.println(outputMarks.get(idx));
 				idx++;
 			}
+			System.out.println("------------------------------\n\n");
 		}
 	}
 

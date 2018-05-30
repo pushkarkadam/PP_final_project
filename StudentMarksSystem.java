@@ -170,6 +170,11 @@ public class StudentMarksSystem{
 								marksCollection.displayMarksByStudentID();
 								break;
 							}
+							case 5:{
+								// TODO: Display marks by unit number
+								marksCollection.displayMarksByUnitNo();
+								break;
+							}
 							default:{
 								// TODO: Add statements
 							}

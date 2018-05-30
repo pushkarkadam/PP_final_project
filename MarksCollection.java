@@ -90,6 +90,21 @@ public class MarksCollection{
 			}
 			System.out.println("------------------------------\n\n");
 		}
+
+		// TODO: Calculate average of marks
+		int[] student_marks = new int[unitMarks.size()];
+		int sum = 0;
+
+		for(int i=0; i < unitMarks.size(); i++){
+			student_marks[i] = unitMarks.get(i).getMarks();
+			sum += student_marks[i];
+		}
+
+		double average = (double)sum/(student_marks.length);
+
+		System.out.println("------------------------------");
+		System.out.println(" Average marks in the unit: " + unit_no + " is " + average);
+		System.out.println("------------------------------\n\n");
 	}
 
 	// TODO: Delete marks by student ID

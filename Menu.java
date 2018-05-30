@@ -60,6 +60,7 @@ public class Menu{
 		marksMenu += "1. Add student marks\n";
 		marksMenu += "2. Delete student marks\n";
 		marksMenu += "3. Display student marks\n";
+		marksMenu += "4. Display student marks by ID\n"
 		marksMenu += "0. Return to main menu\n";
 		marksMenu += "-------------------------\n";
 		marksMenu += "Your Choice -> ";

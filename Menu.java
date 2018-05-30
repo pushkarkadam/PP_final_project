@@ -2,7 +2,7 @@ public class Menu{
 
 	public Menu(){
 	}
-	// TODO: Add main menu
+	// Add main menu
 	public void menu(){
 		String menu = "\n\n";
 		menu += "-----------------------\n";
@@ -18,7 +18,7 @@ public class Menu{
 		System.out.print(menu);
 	}
 
-	// TODO: Add student sub-menu
+	// Add student sub-menu
 	public void studentMenu(){
 		String studentMenu = "\n\n";
 		studentMenu += "-------------------------\n";
@@ -35,7 +35,7 @@ public class Menu{
 
 	}
 
-	// TODO: Add unit sub-menu
+	// Add unit sub-menu
 	public void unitMenu(){
 		String unitMenu = "\n\n";
 		unitMenu += "-------------------------\n";
@@ -51,7 +51,7 @@ public class Menu{
 		System.out.print(unitMenu);
 	}
 
-	// TODO: Add marks sub-menu
+	// Add marks sub-menu
 	public void marksMenu(){
 		String marksMenu = "\n\n";
 		marksMenu += "-------------------------\n";

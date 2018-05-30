@@ -94,7 +94,7 @@ public class StudentMarksSystem{
 					break;
 				}
 				case 2:{
-					// TODO: Create Unit methods
+					// Create Unit methods
 					while(secondChoice != 0){
 						menu.unitMenu();
 						try{
@@ -106,17 +106,17 @@ public class StudentMarksSystem{
 
 						switch(secondChoice){
 							case 1:{
-								// TODO: Add unit
+								// Add unit
 								unitCollection.addUnit();
 								break;
 							}
 							case 2:{
-								// TODO: Delete unit
+								// Delete unit
 								unitCollection.deleteUnit();
 								break;
 							}
 							case 3: {
-								// TODO: Display all units
+								// Display all units
 								System.out.println("\n\n\n-------------------------------------------");
 								System.out.println("Unit No\t\tUnit Name\tUnit Credit");
 								System.out.println("-------------------------------------------");
@@ -125,7 +125,6 @@ public class StudentMarksSystem{
 								break;
 							}
 							default:{
-								// TODO: Add statements
 							}
 						}
 					}
@@ -134,7 +133,7 @@ public class StudentMarksSystem{
 					break;
 				}
 				case 3:{
-					// TODO: Create marks methods
+					// Create marks methods
 					while(secondChoice != 0){
 						menu.marksMenu();
 						try{
@@ -146,17 +145,17 @@ public class StudentMarksSystem{
 
 						switch(secondChoice){
 							case 1:{
-								// TODO: Add marks
+								// Add marks
 								marksCollection.addMarks();
 								break;
 							}
 							case 2:{
-								// TODO: Delete marks
+								// Delete marks
 								marksCollection.deleteMarks();
 								break;
 							}
 							case 3:{
-								// TODO: Display all marks
+								// Display all marks
 								System.out.println("\n\n\n------------------------------");
 								System.out.println("Unit\tSID\t\tMarks");
 								System.out.println("------------------------------");
@@ -166,17 +165,16 @@ public class StudentMarksSystem{
 							}
 
 							case 4:{
-								// TODO: Display marks by student ID
+								// Display marks by student ID
 								marksCollection.displayMarksByStudentID();
 								break;
 							}
 							case 5:{
-								// TODO: Display marks by unit number
+								// Display marks by unit number
 								marksCollection.displayMarksByUnitNo();
 								break;
 							}
 							default:{
-								// TODO: Add statements
 							}
 						}
 					}
@@ -185,7 +183,6 @@ public class StudentMarksSystem{
 					break;
 				}
 				default:{
-					// TODO: Add some statement
 				}
 			}
 

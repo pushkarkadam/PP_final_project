@@ -14,7 +14,7 @@ public class UnitCollection{
 	ArrayList<Unit> unitList = new ArrayList<Unit>();
 	Unit unit;
 
-	// TODO: Add unit to unit list
+	// Add unit to unit list
 	public void addUnit(){
 		System.out.print("\nUnit No: ");
 		unitNo = scan.nextInt();
@@ -33,7 +33,7 @@ public class UnitCollection{
 		System.out.println("Unit added.");
 	}
 
-	// TODO: Display units from unit list
+	// Display units from unit list
 	public void displayUnit(){
 		int idx = 0;
 		while(idx < unitList.size()){
@@ -42,7 +42,7 @@ public class UnitCollection{
 		}
 	}
 
-	// TODO: Delete unit by unit no
+	// Delete unit by unit no
 	public void deleteUnit(){
 		System.out.print("\nEnter Unit number: ");
 		int unit_no = scan.nextInt();
@@ -58,7 +58,7 @@ public class UnitCollection{
 		}
 	}
 
-	// TODO: Read the data from unit.dat
+	// Read the data from unit.dat
 	public void readUnitData() throws FileNotFoundException{
 		String unitFile = "unit.dat";
 		Scanner sc = new Scanner(new File(unitFile));
@@ -76,7 +76,7 @@ public class UnitCollection{
 		System.out.println("Scanning " + unitFile + " complete.\n");
 	}
 
-	//TODO: Write data to file unit.dat
+	// Write data to file unit.dat
 	public void writeUnitData() throws IOException{
 		String unitFile = "unit.dat";
 		PrintWriter unitOutputFile = new PrintWriter(new FileWriter(unitFile));

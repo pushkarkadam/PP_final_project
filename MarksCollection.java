@@ -30,7 +30,7 @@ public class MarksCollection{
 		System.out.println("Marks added");
 	}
 
-	// TODO: Display marks from marks list
+	// Display marks from marks list
 	public void displayMarks(){
 		int idx = 0;
 		while(idx < marksList.size()){
@@ -39,7 +39,7 @@ public class MarksCollection{
 		}
 	}
 
-	// TODO: Display marks by student ID
+	// Display marks by student ID
 	public void displayMarksByStudentID(){
 		ArrayList<Marks> outputMarks = new ArrayList<Marks>();
 		System.out.print("\nEnter student ID: ");
@@ -66,7 +66,7 @@ public class MarksCollection{
 		}
 	}
 
-	// TODO: Display marks by unit number
+	// Display marks by unit number
 	public void displayMarksByUnitNo(){
 		ArrayList<Marks> unitMarks = new ArrayList<Marks>();
 		System.out.print("\nEnter Unit number: ");
@@ -91,7 +91,7 @@ public class MarksCollection{
 			System.out.println("------------------------------\n\n");
 		}
 
-		// TODO: Calculate average of marks
+		// Calculate average of marks
 		int[] student_marks = new int[unitMarks.size()];
 		int sum = 0;
 
@@ -107,7 +107,7 @@ public class MarksCollection{
 		System.out.println("------------------------------\n\n");
 	}
 
-	// TODO: Delete marks by student ID
+	// Delete marks by student ID
 	public void deleteMarks(){
 		System.out.print("\nEnter student ID: ");
 		int student_id = scan.nextInt();
@@ -127,7 +127,7 @@ public class MarksCollection{
 		}
 	}
 
-	// TODO: Read the data from marks.dat file
+	// Read the data from marks.dat file
 	public void readMarksData() throws FileNotFoundException{
 		String marksFile = "marks.dat";
 		Scanner sc = new Scanner(new File(marksFile));
@@ -145,7 +145,7 @@ public class MarksCollection{
 		System.out.println("Scanning " + marksFile + " complete.\n");
 	}
 
-	//TODO: Write data to file marks.dat
+	// Write data to file marks.dat
 	public void writeMarksData() throws IOException{
 		String marksFile = "marks.dat";
 		PrintWriter marksOutputFile = new PrintWriter(new FileWriter(marksFile));

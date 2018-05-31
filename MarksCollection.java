@@ -12,7 +12,7 @@ public class MarksCollection{
 	ArrayList<Marks> marksList = new ArrayList<Marks>();
 	Marks marks;
 
-	// TODO: Add marks to the marks list
+	// Add marks to the marks list
 	public void addMarks(){
 		System.out.print("\nUnit Number: ");
 		unitNo = scan.nextInt();
